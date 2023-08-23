@@ -1,0 +1,25 @@
+h1 {
+    color: #0088ff;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 20px;
+}
+
+.background {
+    background: url(./images/background_kitakami.jpg);
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    /* opacity: 0.3; */
+    /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+.toumei {
+    background-color: rgba(255, 255, 255, 0.7);
+}
