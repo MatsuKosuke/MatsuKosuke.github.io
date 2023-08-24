@@ -31,7 +31,7 @@ table {
 .background {
     background: url(./images/background_kitakami.jpg);
     background-size: cover;
-    background-position: right;
+    background-position: center;
     background-attachment: fixed;
     /* opacity: 0.3; */
     /* background-color: rgba(255, 255, 255, 0.5); */
