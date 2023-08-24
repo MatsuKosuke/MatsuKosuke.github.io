@@ -4,11 +4,28 @@ h1 {
     font-weight: bold;
     text-align: center;
     margin: 0;
+    margin-bottom: 2%;
+    padding: 0;
+}
+
+h2 {
+    color: white;
+    background-color: #0088ff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2%;
     padding: 0;
 }
 
 p {
-    font-size: 20px;
+    font-size: 32px;
+}
+
+table {
+    font-size: 32px;
+    margin: auto;
 }
 
 .background {
@@ -22,4 +39,26 @@ p {
 
 .toumei {
     background-color: rgba(255, 255, 255, 0.7);
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.date p {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    font-size: 40px;
+    text-align: left;
+    background-color: #33b9eec0;
+    color: white;
+    padding-left: 5%;
+    margin-right: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
