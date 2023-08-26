@@ -29,7 +29,8 @@ table {
 }
 
 .background {
-    background: url(./images/background_kitakami.jpg);
+    /* background: url(./images/background_kitakami.jpg); */
+    background: url(./images/background_hitachi.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -45,13 +46,6 @@ table {
     padding-bottom: 2%;
 }
 
-.date p {
-    font-size: 20px;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
 .section {
     font-size: 40px;
     text-align: left;
@@ -61,4 +55,22 @@ table {
     margin-right: 0;
     margin-top: 2%;
     margin-bottom: 2%;
+}
+
+.date p {
+    /* 更新日の表示 */
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* 画像とテキストを横並び */
+.imgwithtext img{
+    vertical-align: bottom;
+    display: inline-block;
+}
+.imgwithtext span{
+    font-size: 40px;
+    display: inline-block;
 }
