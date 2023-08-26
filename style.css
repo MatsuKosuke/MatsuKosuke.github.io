@@ -40,16 +40,16 @@ table {
 
 .toumei {
     background-color: rgba(255, 255, 255, 0.7);
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
     padding-top: 2%;
     padding-bottom: 2%;
 }
 
 .section {
-    font-size: 40px;
+    font-size: 36px;
     text-align: left;
-    background-color: #33b9eec0;
+    background-color: #33b9eed0;
     color: white;
     padding-left: 5%;
     margin-right: 0;
@@ -73,4 +73,31 @@ table {
 .imgwithtext span{
     font-size: 40px;
     display: inline-block;
+}
+
+/* === ラジオボタンは非表示 ================== */
+#langChenge input[type="radio"]{
+    display    : none;
+}
+/* === 各ラジオボタンのラベルをボタンに変更 == */
+#langChenge label{
+    display    : inline-block;
+    border     : 1px solid #ccc;
+    background : #eee;
+    box-shadow : 2px 2px #999;
+    padding    : 2px 6px;
+}
+/* === 選択されている言語のラベル色を変更 ==== */
+#langJa:checked ~ label[for="langJa"] {
+    background : #ffa64d;
+}
+#langEn:checked ~ label[for="langEn"] {
+    background : #ffa64d;
+}
+/* === 選択されていない言語は非表示にする ==== */
+#langJa:not(:checked) ~ * *:lang(ja) {
+    display    : none;
+}
+#langEn:not(:checked) ~ * *:lang(en) {
+    display    : none;
 }
