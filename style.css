@@ -1,6 +1,6 @@
 h1 {
     color: #0088ff;
-    font-size: 72px;
+    font-size: 480%;
     font-weight: bold;
     text-align: center;
     margin: 0;
@@ -20,11 +20,11 @@ h2 {
 }
 
 p {
-    font-size: 32px;
+    font-size: 200%;
 }
 
 table {
-    font-size: 32px;
+    font-size: 200%;
     margin: auto;
 }
 
@@ -47,7 +47,7 @@ table {
 }
 
 .section {
-    font-size: 36px;
+    font-size: 240%;
     text-align: left;
     background-color: #33b9eed0;
     color: white;
@@ -59,7 +59,7 @@ table {
 
 .date p {
     /* 更新日の表示 */
-    font-size: 20px;
+    font-size: 120%;
     text-align: center;
     margin: 0;
     padding: 0;
