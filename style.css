@@ -20,7 +20,20 @@ h2 {
 }
 
 p {
+    padding-left: 5%;
+    padding-right: 5%;
     font-size: 200%;
+}
+
+.kajo {
+    display: flex;
+    justify-content: center;
+    background-color: #cde;
+    font-size: 180%;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1%;
 }
 
 table {
