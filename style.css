@@ -27,7 +27,7 @@ p {
 
 .kajo {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     background-color: #cde;
     font-size: 180%;
     text-align: left;
