@@ -28,7 +28,7 @@ p {
 .kajo {
     display: flex;
     justify-content: left;
-    background-color: #cde;
+    background-color: rgb(200, 220, 245);
     font-size: 180%;
     text-align: left;
     margin-left: 5%;
@@ -52,7 +52,7 @@ table {
 }
 
 .toumei {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(240, 240, 255, 0.8);
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 2%;
