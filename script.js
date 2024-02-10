@@ -245,7 +245,10 @@ window.onload = async function() {
                 // matchingRowsを，ヒット指数の降順にソートしてから表示する
                 matchingRows.sort((row1, row2) => row2[3] - row1[3]);
                 const relatedWordsForDisplay = matchingRows.map(row => `${row[1]} (${calcConfidence(row[3])})`);
-                const displayRelated = `＜「${lemma} ${checkedLabelsStr}」である語＞\n`;
+                let displayRelated = `＜「${lemma} ${checkedLabelsStr}」である語＞\n`;
+                if(relatedWordsForDisplay.length == 0){
+                    displayRelated += "※該当する語がありません．他のチェックを試してみてください．";
+                }
                 document.getElementById('changedRelateWords').innerText = displayRelated + relatedWordsForDisplay.join('\n');
             } catch (error){
                 document.getElementById('changedRelateWords').innerText = "No match found.";
