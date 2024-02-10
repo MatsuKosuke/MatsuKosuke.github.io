@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inflection Tool</title>
+    <style>
+        /* CSS スタイルをここに追加 */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            display: block;
+            margin: 1%;
+        }
+        #message {
+            margin-top: 100%;
+        }
+
+        /* ラベルのカテゴリ */
+        #category {
+            font-size: 120%;
+            padding: 0.2% 0.5%; /* 上下・左右の余白 */
+            margin: 0.2% 0; /* 上下・左右の余白 */
+            background-color: #3333dd;
+            color: white;
+            display: inline-block; /* インラインブロック要素として表示 */
+        }
+
+        /* チェックパターンが'in'と指定されたときの色 */
+        input[type="checkbox"][pattern="in"] + label {
+            background-color: #ffa0f0; /* チェックされたときの背景色を設定 */
+            color: black;
+            padding:0.3%;
+            /*width: 10%;*/
+        }
+
+        /* チェックパターンが'out'と指定されたときの色 */
+        input[type="checkbox"][pattern="out"] + label {
+            background-color: white; /* チェックされたときの背景色を設定 */
+            color: #888888;
+            padding: 0.3%
+            /*width: 10%;*/
+        }
+        
+        /* アコーディオンのスタイル */
+        .accordion {
+        background-color: white;
+        color: #38f;
+        cursor: pointer;
+        padding: 0% 1%;
+        width: auto;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 16px;
+        transition: 0.4s;
+        }
+
+        /* アコーディオンの内容 */
+        .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+        }
+    </style>
+</head>
+
+<!-- ラベルと日本語・英語の対応
+labels = ['V', 'PRS', 'IPFV', 'PST', 'PFV', 'POL', 'FOREG', 'NEG', 'PROSP',
+                  'INTEN', 'OPT', '1', '3', 'IMP', 'OBLIG', 'POT', 'PASS', 'CAUS',
+                  'FORM', 'ELEV', 'HUMB', 'PERM', 'COL']
+feature_list_en = ['Verb', 'Present', 'Imperfective', 'Past', 'Perfective', 'Polite', 'Formal', 'Negative', 'Prospective',
+                    'Intentive', 'Optative', 'Subjective', 'Objective', 'Imperative', 'Obligative', 'Potential', 'Passive', 'Causative',
+                    'Formal', 'Elevating', 'Humbling', 'Permissive', 'Colloquial']
+feature_list_ja = ['動詞', '現在', '未完了', '過去', '完了', '丁寧', 'ます体', '否定', '推量',
+                    '意志', '願望', '主観', '客観', '命令', '義務', '可能', '受動', '使役',
+                    '正式', '尊敬', '謙譲', '許可', '口語']
+-->
+
+<body>
+    <h1>意味分析・語形変換ツール（試作中）/ Inflection Tool</h1>
+    <p>リロードするとリセットされます．</p>
+    <!--検索ボタン-->
+    <div id="description"></div>
+    <input type="text" id="inputText" placeholder="Enter an inflected form" style="font-size: 130%; width: 40%;">
+    <button id="searchBtn" style="font-size: 100%; margin-top: 1%; margin-bottom: 1%;">　　検　索　　</button>
+    <button id="changeBtn" style="font-size: 100%;">別の意味を表示</button>
+
+    <br>
+    <button class="accordion">詳細の説明を見る</button>
+    <div class="panel">
+      <ol>
+        <li>このツールは，日本語の語形を解析し，その意味を調べるためのものです．</li>
+        <li>検索ボックスに語形を入力し，「検索」ボタンを押すと，その語形の意味が表示されます．</li>
+        <li>ピンク色のチェックボックスが，語形の意味に関する情報を示しています．</li>
+        <li>同時に，似た意味の語形が表示されます．「ヒット指数」は，数値が100に近いほどよく使われていることを表します．</li>
+        <li>入力した語形に複数の意味がある場合は，「別の意味を表示」ボタンで表示する意味を切り替えられます．</li>
+        <li>チェックボックスをクリックすると，ラベルの異なる別の語形を表示できます．</li>
+      </ol>
+    </div>
+
+    <script>
+        // アコーディオンの動作を制御するJavaScript
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+        }
+    </script>
+
+    <div id="result"></div>
+    <div id="checkboxes" style="font-size: 100%; padding: 1%;"></div>
+    <div id="resultDisplay" style="font-size: 100%; padding: 1%;"></div>
+    <div id="relateWords" style="font-size: 100%; padding: 1%;"></div>
+
+    <div id="checkboxes" style="font-size: 100%; padding: 1%;">
+        <div id="category">品詞</div>
+        <input type="checkbox" id="chk_V" pattern="out">
+        <label for="chk_V">V (動詞/Verb)</label><br>
+
+        <div id="category">時制</div>
+        <input type="checkbox" id="chk_PRS" pattern="out">
+        <label for="chk_PRS">PRS (現在・未完了/Present, Imperfective)</label>
+        <input type="checkbox" id="chk_PST" pattern="out">
+        <label for="chk_PST">PST (過去・完了/Past, Perfective)</label><br>
+        <!--
+        <div id="category">テンス・アスペクト</div>
+        <input type="checkbox" id="chk_PRS" pattern="out">
+        <label for="chk_PRS">PRS (現在/Present)</label>
+        <input type="checkbox" id="chk_IPFV" pattern="out">
+        <label for="chk_IPFV">IPFV (未完了/Imperfective)</label>
+        <input type="checkbox" id="chk_PST" pattern="out">
+        <label for="chk_PST">PST (過去/Past)</label>
+        <input type="checkbox" id="chk_PFV" pattern="out">
+        <label for="chk_PFV">PFV (完了/Perfective)</label><br>
+        -->
+
+        <div id="category">丁寧さ</div>
+        <input type="checkbox" id="chk_POL" pattern="out">
+        <label for="chk_POL">POL (丁寧/Polite)</label>
+        <input type="checkbox" id="chk_FOREG" pattern="out">
+        <label for="chk_FOREG">FOREG (ます体/Formal)</label><br>
+
+        <div id="category">敬語</div>
+        <input type="checkbox" id="chk_FORM" pattern="out">
+        <label for="chk_FORM">FORM (正式/Formal)</label>
+        <input type="checkbox" id="chk_ELEV" pattern="out">
+        <label for="chk_ELEV">ELEV (尊敬/Elevating)</label>
+        <input type="checkbox" id="chk_HUMB" pattern="out">
+        <label for="chk_HUMB">HUMB (謙譲/Humbling)</label>
+        <input type="checkbox" id="chk_COL" pattern="out">
+        <label for="chk_COL">COL (口語/Colloquial)</label><br>
+
+        <div id="category">ムード</div>
+        <input type="checkbox" id="chk_IMP" pattern="out">
+        <label for="chk_IMP">IMP (命令/Imperative)</label>
+        <input type="checkbox" id="chk_OBLIG" pattern="out">
+        <label for="chk_OBLIG">OBLIG (義務/Obligative)</label>
+        <input type="checkbox" id="chk_INTEN" pattern="out">
+        <label for="chk_INTEN">INTEN (意志/Intentive)</label><br>
+        <input type="checkbox" id="chk_OPT" pattern="out">
+        <label for="chk_OPT">OPT (願望/Optative)</label>
+        <input type="checkbox" id="chk_1" pattern="out">
+        <label for="chk_1">1 (主観/Subjective)</label>
+        <input type="checkbox" id="chk_3" pattern="out">
+        <label for="chk_3">3 (客観/Objective)</label><br>
+        <input type="checkbox" id="chk_POT" pattern="out">
+        <label for="chk_POT">POT (可能/Potential)</label>
+        <input type="checkbox" id="chk_PASS" pattern="out">
+        <label for="chk_PASS">PASS (受動/Passive)</label>
+        <input type="checkbox" id="chk_CAUS" pattern="out">
+        <label for="chk_CAUS">CAUS (使役/Causative)</label>
+        <input type="checkbox" id="chk_PERM" pattern="out">
+        <label for="chk_PERM">PERM (許可/Permissive)</label><br>
+
+        <div id="category">その他</div>
+        <input type="checkbox" id="chk_NEG" pattern="out">
+        <label for="chk_NEG">NEG (否定/Negative)</label>
+        <input type="checkbox" id="chk_PROSP" pattern="out">
+        <label for="chk_PROSP">PROSP (推量/Prospective)</label><br>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
