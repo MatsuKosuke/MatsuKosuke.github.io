@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    display: block;
+    background-color: #f0f8ff;
+    margin: 1%;
+}
+#message {
+    margin-top: 100%;
+}
+
+.resultBlock {
+    display: block;
+    background-color: #aaeeff;
+    width: auto;
+    font-size: 100%;
+    padding: 1%;
+    margin: 0 1%;
+}
+
+/* ラベルのカテゴリ */
+#category {
+    font-size: 120%;
+    padding: 0.2% 0.5%; /* 上下・左右の余白 */
+    margin: 0.2% 0; /* 上下・左右の余白 */
+    background-color: #3333dd;
+    color: white;
+    display: inline-block; /* インラインブロック要素として表示 */
+}
+
+/* チェックパターンが'in'と指定されたときの色 */
+input[type="checkbox"][pattern="in"] + label {
+    background-color: #ffa0f0; /* チェックされたときの背景色を設定 */
+    color: black;
+    padding: 0.3%;
+    /*width: 10%;*/
+}
+
+/* チェックパターンが'out'と指定されたときの色 */
+input[type="checkbox"][pattern="out"] + label {
+    background-color: #f0f8ff; /* チェックされないときの背景色を設定 */
+    color: black;
+    padding: 0.3%;
+    /*width: 10%;*/
+}
+
+/* アコーディオンのスタイル */
+.accordion {
+background-color: #f0f8ff;
+color: #38f;
+cursor: pointer;
+padding: 0% 0%;
+width: auto;
+border: none;
+text-align: left;
+outline: none;
+font-size: 16px;
+transition: 0.4s;
+}
+
+/* アコーディオンの内容 */
+.panel {
+padding: 0 0;
+display: none;
+background-color: white;
+overflow: hidden;
+}

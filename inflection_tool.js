@@ -1,3 +1,4 @@
+// 失敗作
 let dataArray;
 let inputText;
 
