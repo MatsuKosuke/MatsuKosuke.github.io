@@ -142,7 +142,7 @@ window.onload = async function() {
 
     document.getElementById("resultDisplay").innerText = "検索結果がここに表示されます"
     document.getElementById("relateWords").innerText = "関連語がここに表示されます"
-    document.getElementById("changedRelateWords").innerText = "検索後にチェックボックスを変更すると，ここにその意味の語形が表示されます．"
+    document.getElementById("changedRelateWords").innerText = "検索後にチェックボックスを変更すると，その意味の語形がここに表示されます．"
 
 
     // チェックボックスのラベル

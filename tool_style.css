@@ -15,7 +15,7 @@ body {
     width: auto;
     font-size: 100%;
     padding: 1%;
-    margin: 0;
+    margin: 1%;
 }
 
 /* チェックボックスのスタイル */
@@ -61,7 +61,7 @@ input[type="checkbox"][pattern="out"] + label {
 /* アコーディオンのスタイル */
 .accordion {
     background-color: #f0f8ff;
-    color: #09f;
+    color: #06f;
     cursor: pointer;
     padding: 0% 0%;
     width: auto;
