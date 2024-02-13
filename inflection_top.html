@@ -5,37 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Redirect Page</title>
 <script>
-    // ブラウザの言語設定を取得
-    var userLang = navigator.language || navigator.userLanguage;
+  console.log("Redirecting...");
+  // ブラウザの言語設定を取得
+  //var userLang = navigator.language || navigator.userLanguage;
 
-    let is_ja = True;
-    // // 言語に応じてリダイレクト
-    // if (userLang.startsWith("ja")) {
-    //     // 日本語のページにリダイレクト
-    //     is_ja = True;
-    // } else {
-    //     // 英語のページにリダイレクト
-    //     is_ja = False;
-    // }
+  // let is_ja = True;
+  // // 言語に応じてリダイレクト
+  // if (userLang.startsWith("ja")) {
+  //     // 日本語のページにリダイレクト
+  //     is_ja = True;
+  // } else {
+  //     // 英語のページにリダイレクト
+  //     is_ja = False;
+  // }
 
 
-    // スマートフォンかどうかを判定する関数
-    function isMobile() {
-      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
+  // スマートフォンかどうかを判定する関数
+  function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
 
-    // スマートフォンならスマートフォン用のページにリダイレクトする
-    is_phone = isMobile();  // スマートフォンならばTrue
+  // スマートフォンならスマートフォン用のページにリダイレクトする
+  if (isMobile()) {
+    window.location.href = "inflection_ph_ja.html";
+  } else {
+    window.location.href = "inflection_pc_ja.html";
+  }
 
-    if (is_ja && is_phone) {
-      window.location.href = "inflection_ph_ja.html";
-    } else if (is_ja && !is_phone) {
-      window.location.href = "inflection_pc_ja.html";
-    } else if (!is_ja && is_phone) {
-      window.location.href = "inflection_ph_en.html";
-    } else {
-      window.location.href = "inflection_pc_en.html";
-    }
+  // is_phone = isMobile();  // スマートフォンならばTrue
+  // if (is_ja && is_phone) {
+  //   window.location.href = "inflection_ph_ja.html";
+  // } else if (is_ja && !is_phone) {
+  //   window.location.href = "inflection_pc_ja.html";
+  // } else if (!is_ja && is_phone) {
+  //   window.location.href = "inflection_ph_en.html";
+  // } else {
+  //   window.location.href = "inflection_pc_en.html";
+  // }
 </script>
 </head>
 <body>
