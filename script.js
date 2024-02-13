@@ -73,14 +73,14 @@ function displayResult(displayNum, dataArray, inputText, labels, mode) {
         let message = `「${inputText}」には${retrieval_num}件の意味が存在します．表示中：${(displayNum + 1)} / ${retrieval_num}`;
         document.getElementById("result").innerText = message + "\nLemma: " + lemma + add_message;
     } catch (error){
-        document.getElementById("result").innerText = "No match found.";
+        document.getElementById("result").innerText = "No match found. 該当する語がありません．他の語を試してみてください．";
         // チェックボックスの状態をリセット
         labels.forEach(label => {
             document.getElementById(`chk_${label}`).checked = false;
             document.getElementById(`chk_${label}`).setAttribute("pattern", "out");
         });
-        document.getElementById("resultDisplay").innerText = "";
-        document.getElementById("relateWords").innerText = "";
+        document.getElementById("resultDisplay").innerText = "検索結果がここに表示されます";
+        document.getElementById("relateWords").innerText = "関連語がここに表示されます";
         return 0;
     }
 
@@ -140,9 +140,9 @@ window.onload = async function() {
     const lines = csvData.split('\n');
     const dataArray = lines.map(line => line.trim().split('\t'));
 
-    document.getElementById("resultDisplay").innerText = "＜検索結果＞"
-    document.getElementById("relateWords").innerText = "＜関連語＞"
-    document.getElementById("changedRelateWords").innerText = "チェックボックスを変更すると，ここにその意味の語形が表示されます．"
+    document.getElementById("resultDisplay").innerText = "検索結果がここに表示されます"
+    document.getElementById("relateWords").innerText = "関連語がここに表示されます"
+    document.getElementById("changedRelateWords").innerText = "検索後にチェックボックスを変更すると，ここにその意味の語形が表示されます．"
 
 
     // チェックボックスのラベル
