@@ -18,6 +18,19 @@ body {
     margin: 0 1%;
 }
 
+/* チェックボックスのスタイル */
+.chk-box {
+    width: 20px; /* 幅 */
+    height: 20px; /* 高さ */
+    float: center;
+}
+
+.chk-str {
+    font-size: 120%; /* 文字サイズ */
+    padding: 0.2% 0.5%; /* 上下・左右の余白 */
+    margin: 0.2% 0; /* 上下・左右の余白 */
+}
+
 /* ラベルのカテゴリ */
 #category {
     font-size: 120%;
@@ -44,24 +57,42 @@ input[type="checkbox"][pattern="out"] + label {
     /*width: 10%;*/
 }
 
+
 /* アコーディオンのスタイル */
 .accordion {
-background-color: #f0f8ff;
-color: #38f;
-cursor: pointer;
-padding: 0% 0%;
-width: auto;
-border: none;
-text-align: left;
-outline: none;
-font-size: 16px;
-transition: 0.4s;
+    background-color: #f0f8ff;
+    color: #09f;
+    cursor: pointer;
+    padding: 0% 0%;
+    width: auto;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
 }
 
 /* アコーディオンの内容 */
 .panel {
-padding: 0 0;
-display: none;
-background-color: white;
-overflow: hidden;
+    padding: 0 0;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* アコーディオンボタンがアクティブな場合のスタイル */
+.active, .accordion:hover {
+    background-color: #ddd;
+}
+  
+/* アコーディオンアイコンのスタイル */
+.accordion::after {
+    content: "\25BC"; /* 下向きの三角記号▼ */
+    float: center right;
+    margin-left: 5px;
+}
+  
+/* アコーディオンアクティブ時のアイコンのスタイル */
+.active::after {
+    content: "\25B2"; /* 上向きの三角記号▲ */
 }
