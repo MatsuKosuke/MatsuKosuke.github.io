@@ -3,7 +3,7 @@ body {
     text-align: left;
     display: block;
     background-color: #f0f8ff;
-    margin: 1%;
+    margin: 2%;
 }
 #message {
     margin-top: 100%;
@@ -15,7 +15,7 @@ body {
     width: auto;
     font-size: 100%;
     padding: 1%;
-    margin: 0 1%;
+    margin: 0;
 }
 
 /* チェックボックスのスタイル */
