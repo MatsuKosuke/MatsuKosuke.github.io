@@ -68,7 +68,7 @@ table {
 }
 
 .toumei {
-    background-color: rgba(240, 240, 255, 0.8);
+    background-color: rgba(240, 240, 255, 0.9);
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 2%;
@@ -76,7 +76,7 @@ table {
 }
 
 .section {
-    font-size: 240%;
+    font-size: 250%;
     text-align: left;
     background-color: #33b9eed0;
     color: white;
