@@ -25,6 +25,22 @@ p {
     font-size: 200%;
 }
 
+.key {
+    width: fit-content;
+    padding: 3px 25px;
+    margin: 5px auto; /* autoにすることで中央揃え */
+    font-size: 150%;
+    background-color: #26f;
+    color: white;
+}
+
+.value {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 200%;
+    color: black;
+}
+
 .kajo {
     display: flex;
     justify-content: left;
