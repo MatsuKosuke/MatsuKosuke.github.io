@@ -26,12 +26,12 @@ p {
 }
 
 .key {
-    width: fit-content;
     padding: 3px 25px;
     margin: 5px auto; /* autoにすることで中央揃え */
     font-size: 150%;
     background-color: #26f;
     color: white;
+    width: fit-content;
 }
 
 .value {
