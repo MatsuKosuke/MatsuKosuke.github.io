@@ -1,6 +1,6 @@
 h1 {
     color: #0088ff;
-    font-size: 480%;
+    font-size: 400%;
     font-weight: bold;
     text-align: center;
     margin: 0;
@@ -11,7 +11,7 @@ h1 {
 h2 {
     color: white;
     background-color: #0088ff;
-    font-size: 40px;
+    font-size: 200%;
     font-weight: bold;
     text-align: center;
     margin: 0;
@@ -22,7 +22,7 @@ h2 {
 p {
     padding-left: 5%;
     padding-right: 5%;
-    font-size: 200%;
+    font-size: 120%;
 }
 
 .key {
@@ -37,7 +37,7 @@ p {
 .value {
     padding-left: 5%;
     padding-right: 5%;
-    font-size: 200%;
+    font-size: 150%;
     color: black;
 }
 
@@ -45,7 +45,7 @@ p {
     display: flex;
     justify-content: left;
     background-color: rgb(200, 220, 245);
-    font-size: 180%;
+    font-size: 120%;
     text-align: left;
     margin-left: 5%;
     margin-right: 5%;
@@ -53,7 +53,7 @@ p {
 }
 
 table {
-    font-size: 200%;
+    font-size: 150%;
     margin: auto;
 }
 
@@ -76,7 +76,7 @@ table {
 }
 
 .section {
-    font-size: 250%;
+    font-size: 200%;
     text-align: left;
     background-color: #33b9eed0;
     color: white;
@@ -88,7 +88,7 @@ table {
 
 .date p {
     /* 更新日の表示 */
-    font-size: 120%;
+    font-size: 100%;
     text-align: center;
     margin: 0;
     padding: 0;
