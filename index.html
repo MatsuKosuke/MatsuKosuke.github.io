@@ -1,405 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>松﨑 孝介 / Kosuke Matsuzaki</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link href="style.css" rel="stylesheet">
-<link rel="icon" type="image/png" href="images/my_icon.png"> <!-- ブラウザ用アイコン -->
-<link rel="apple-touch-icon" sizes="180x180" href="images/my_icon.png"> <!-- iPhone用アイコン -->
-<link rel="icon" type="image/png" href="images/my_icon.png" sizes="180x180"> <!-- Android用アイコン -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kosuke Matsuzaki / 松﨑 孝介</title>
+  <meta name="description" content="Kosuke Matsuzaki's personal academic website.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/my_icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/my_icon.png">
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="hero.group"></p>
+        <h1>
+          <span>Kosuke Matsuzaki</span>
+          <span lang="ja">松﨑 孝介</span>
+        </h1>
+        <p class="lead" data-i18n="hero.summary"></p>
+      </div>
+      <figure class="portrait-card">
+        <img src="images/my_icon.png" alt="Kosuke Matsuzaki" width="320" height="320">
+      </figure>
+    </div>
+  </header>
 
-</header>
+  <main id="main" class="container layout">
+    <nav class="toc" aria-labelledby="toc-title">
+      <h2 id="toc-title" data-i18n="toc.title"></h2>
+      <ol id="toc-list"></ol>
 
-<!-- 背景の参考：https://jajaaan.co.jp/web-production/frontend/css-background/ -->
+      <div class="toc-language" aria-label="Language selector">
+        <button type="button" class="lang-button" data-lang="ja">日本語</button>
+        <button type="button" class="lang-button" data-lang="en">English</button>
+      </div>
+    </nav>
 
-<body style="font-family: Arial, Helvetica, sans-serif;">
-    <div class="text-center background m-0 p-0 bg-light border">
-        <div class="toumei">
-
-            <h1 style="padding-top: 3%;">Kosuke Matsuzaki<br>松﨑 孝介</h1>
-
-            <div>
-                <p style="font-size: 350%;">
-                    Tohoku NLP Group
-                </p>
-            </div>
-
-            <div style="text-align: center;" class="imgwithtext">
-                <img src="images/my_icon.jpg" width=20%>
-                <!-- <span>Tohoku NLP Group</span> -->
-            </div>
-
-            <br>
-
-            <div class="section">
-                News
-            </div>
-
-            <div class="kajo">
-                <ul>
-                    <li>
-                        2025/9/19: YANS2025にて奨励賞を受賞しました！
-                    </li>
-                    <li>
-                        2024/2/16: I have released the <a href="https://cl-tohoku.github.io/J-UniMorph/inflection_tool/inflection.html?lang=en" target="_blank">J-UniMorph Visualizer</a> (<a href="https://cl-tohoku.github.io/J-UniMorph/inflection_tool/inflection.html" target="_blank">意味理解・語形変換ツール</a>)
-                    </li>
-                    <li>
-                        2024/1/15: I have released <a href="https://github.com/cl-tohoku/J-UniMorph">J-UniMorph</a>, a dataset about Japanese morphology!
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="section">
-                Profile
-            </div>
-
-            <div>
-                <p class="key">Affiliation</p>
-                <p class="value">
-                    <!-- Tohoku University, 4th year undergraduate student<br> -->
-                    <!-- 東北大学 工学部4年 -->
-                    <!-- 2nd-year M.S. student at Tohoku University<br> -->
-                    <!-- 東北大学 大学院情報科学研究科 博士前期課程2年 -->
-                    First-year Ph.D. student, Graduate School of Information Sciences, Tohoku University<br>
-                    東北大学 大学院情報科学研究科 博士後期課程1年
-                </p>
-                <p class="key">Research group</p>
-                <p class="value">
-                    <a href="https://www.nlp.ecei.tohoku.ac.jp/">Tohoku NLP Group</a>
-                </p>
-                <p class="key">Research field</p>
-                <p class="value">
-                    Natural Language Processing (Automatic Speech Recognition of Japanese Dialects)<br>
-                    自然言語処理（日本語方言の音声認識）
-                </p>
-            </div>
-            <!-- <div>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td align="right">所属</td>
-                            <td align="center">：</td>
-                            <td align="left">東北大学 工学部4年</td>
-                        </tr>
-                        <tr>
-                            <td align="right">研究室</td>
-                            <td align="center">：</td>
-                            <td align="left"><a href="https://www.nlp.ecei.tohoku.ac.jp/">東北NLPグループ</a></td>
-                        </tr>
-                        <tr>
-                            <td align="right">研究分野</td>
-                            <td align="center">：</td>
-                            <td align="left">自然言語処理（形態論）</td>
-                        </tr>
-                        <tr>
-                            <td align="right">Twitter</td>
-                            <td align="center">：</td>
-                            <td align="left"><a href="https://twitter.com/Matsuzaki_NLP">@Matsuzaki_NLP</a></td>
-                        </tr>
-                        <tr>
-                            <td align="right">GitHub</td>
-                            <td align="center">：</td>
-                            <td align="left"><a href="https://github.com/MatsuKosuke">MatsuKosuke</a></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Mail</td>
-                            <td align="center">：</td>
-                            <td align="left">matsuzaki.kosuke.r7 (at) dc.tohoku.ac.jp</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> -->
-            
-
-            <!-- <div class="section">
-                Conference and Workshop
-            </div>
-
-            <div>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td align="right">Conference</td>
-                            <td align="center">：</td>
-                            <td align="left"><a href="https://anlp.jp/nlp2024/">NLP2024</a></td>
-                            <td align="left">（2024/3/11 - 15）</td>
-                        </tr>
-                        <tr>
-                            <td align="right">Workshop</td>
-                            <td align="center">：</td>
-                            <td align="left"><a href="https://sigmorphon.github.io/workshops/2024/">SIGMORPHON 2024<br> (NAACL 2024 Workshop)</a></td>
-                            <td align="left">（2024/6/20）</td>
-                        </tr>
-                        <tr>
-                            <td align="right"></td>
-                            <td align="center">：</td>
-                            <td align="left"><a href="https://sites.google.com/view/lingfes2024">言語学フェス2024</a></td>
-                            <td align="left">（2024/1/20）</td>
-                        </tr>
-                        <tr>
-                            <td align="right"></td>
-                            <td align="center">：</td>
-                            <td align="left"><a href="https://yans.anlp.jp/entry/yans2023">YANS2023</a></td>
-                            <td align="left">（2023/8/30 - 31）</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> -->
-
-
-            <div class="section">
-                Publications
-            </div>
-
-            <div class="kajo">
-                <ul>
-                    <li>
-                        <u>松﨑孝介</u> (東北大), 谷口雅弥 (理研/東北大), 坂口慶祐 (東北大/理研)．
-                        <b>日本語方言の音声認識における学習データの規模と特性</b>，
-                        <a href="https://anlp.jp/nlp2026/">言語処理学会第32回年次大会(NLP2026)</a>，2026/3/10．
-                        <br>
-                        <ul>
-                            <li>
-                                論文は<a href="https://www.anlp.jp/proceedings/annual_meeting/2026/pdf_dir/C1-7.pdf" target="_blank">こちら</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <u>松﨑孝介</u> (東北大)，谷口雅弥 (理研)．
-                        <b>方言音声認識における古典的手法の再考</b>．
-                        <a href="https://yans.anlp.jp/entry/yans2025">第20回言語処理若手シンポジウム (YANS2025)</a>，2025/9/19．
-                        <br>
-                        <ul>
-                            <li>
-                                発表ポスターは<a href="https://matsukosuke.github.io/images/YANS2025_Matsuzaki.pdf" target="_blank">こちら</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        本田恭平 (ブリヂストン), <u>松﨑孝介</u> <span style="font-size: 60%;">(代理発表)</span>, 吉田遥音 (東北大), 坂口慶祐 (東北大/理研)．
-                        <b>認知言語学的イメージスキーマの生成と解釈における大規模言語モデルと画像生成モデルの評価</b>，
-                        <a href="https://anlp.jp/nlp2025/">言語処理学会第31回年次大会(NLP2025)</a>，2025/3/11．
-                        <br>
-                        <ul>
-                            <li>
-                                論文は<a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/P4-9.pdf" target="_blank">こちら</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        Kosei Kobayashi, Kosuke Matsuzaki, Masaya Taniguchi, Keisuke Sakaguchi, Kentaro Inui, Kentaro Abe.
-                        <b>FinchGPT: A Transformer-based Language Model for Birdsong Analysis.</b>
-                        arXiv, February 2025.
-                        <ul>
-                            <li>
-                                The paper is <a href="https://arxiv.org/abs/2502.00344" target="_blank">Here</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <u>Kosuke Matsuzaki</u>, Masaya Taniguchi, Kentaro Inui, Keisuke Sakaguchi. 
-                        <b>J-UniMorph: Japanese Morphological Annotation through the Universal Feature Schema.</b>
-                        <a href="https://sigmorphon.github.io/workshops/2024/">21st SIGMORPHON Workshop on Computational Research in Phonetics, Phonology, and Morphology</a>, pp. 7–19, 2024/6/20.
-                        <ul>
-                            <li>
-                                The paper is <a href="https://aclanthology.org/2024.sigmorphon-1.2/" target="_blank">Here</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <u>松﨑孝介</u> (東北大), 谷口雅弥 (理研), 乾健太郎 (MBZUAI/東北大/理研), 坂口慶祐 (東北大/理研)．
-                        <b>J-UniMorph: 日本語の形態論における意味分類の体系化</b>，
-                        <a href="https://anlp.jp/nlp2024/">言語処理学会第30回年次大会(NLP2024)</a>，2024/3/13．
-                        <br>
-                        <ul>
-                            <li>
-                                論文は<a href="https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/C7-5.pdf" target="_blank">こちら</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <u>松﨑孝介</u> (東北大)．
-                        <b>新しい動詞活⽤辞書 ⽇本語UniMorphの紹介</b>．
-                        <a href="https://sites.google.com/view/lingfes2024">言語学フェス2024</a>，2024/1/20．
-                        <br>
-                        <ul>
-                            <li>
-                                発表ポスターは<a href="https://matsukosuke.github.io/images/LingFes2024_A19.pdf" target="_blank">こちら</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <u>松﨑孝介</u> (東北大)，谷口雅弥 (理研)，坂口慶祐 (東北大/理研)，乾健太郎 (東北大/理研)．
-                        <b>日本語学習のための形態意味中心の動詞活用</b>．
-                        <a href="https://yans.anlp.jp/entry/yans2023">NLP若手の会（YANS）第18回シンポジウム</a>，2023/8/30．
-                        <br>
-                        <ul>
-                            <li>
-                                発表ポスターは<a href="https://matsukosuke.github.io/images/YANS2023_Matsuzaki.pdf" target="_blank">こちら</a>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-            </div>
-            
-
-            <div class="section">
-                Resource
-            </div>
-
-            <div class="kajo">
-                <ul>
-                    <li>
-                        I have released a dataset about Japanese morphology, <a href="https://github.com/cl-tohoku/J-UniMorph" target="_blank">J-UniMorph</a>.
-                        <br>
-                        J-UniMorph is a Japanese version of <a href="https://unimorph.github.io/">UniMorph</a>, a project designed to provide a common schema for labeling morphological features across various languages.
-                        <br>
-                        データセット（<a href="https://github.com/cl-tohoku/J-UniMorph" target="_blank">J-UniMorph</a>）を作成し，公開しています．
-                        <br>
-                        J-UniMorphは，<a href="https://unimorph.github.io/">UniMorph</a>（世界中のあらゆる言語の語形に共通のスキーマで特徴ラベルを付与するプロジェクト）の日本語版データセットです．
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="section">
-                Awards
-            </div>
-
-            <div class="kajo">
-                <ul>
-                    <li>
-                        第20回言語処理若手シンポジウム (YANS2025)：
-                        <a href="https://yans.anlp.jp/entry/award#%E5%A5%A8%E5%8A%B1%E8%B3%9E-%E5%AF%BE%E8%B1%A1246%E4%BB%B6%E4%B8%AD24%E4%BB%B6">奨励賞</a>，2025/9/19．
-                        <br>
-                        Rate: 24 / 246 (9.76%)
-                    </li>
-                    <li>
-                        東北大学 総長賞（令和5年度），2024/3/26．
-                        <br>
-                        Rate: 27 / 2,358 (1.15%)
-                    </li>
-                    <li>
-                        NLP若手の会（YANS）第18回シンポジウム：
-                        <a href="https://yans.anlp.jp/entry/award/#スポンサー賞">Helpfeel賞</a>（スポンサー賞），2023/8/31．
-                        <br>
-                        Rate: 1 / 138 (0.72%)
-                    </li>
-                    <li>
-                        <a href="https://www.iee.jp/tokai/award/%E6%94%AF%E9%83%A8%E9%95%B7%E8%B3%9E%E5%8F%97%E8%B3%9E%E8%80%852021%E5%B9%B4/">電気学会東海支部長賞（令和3年度）</a>，2022/3/1．
-                        <br>
-                        （画像処理による常温硬化シンチレータの均一性評価に関する研究）
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="section">
-                Education
-            </div>
-
-            <table>
-                <tbody>
-                    <tr>
-                        <td align="right">2024/4 〜</td>
-                        <td align="center">：</td>
-                        <td align="left">東北大学 大学院情報科学研究科</td>
-                    </tr>
-                    <tr>
-                        <td align="right">2022/4 〜 2024/3</td>
-                        <td align="center">：</td>
-                        <td align="left">東北大学 工学部（3年次編入学）</td>
-                    </tr>
-                    <tr>
-                        <td align="right">2017/4 〜 2022/3</td>
-                        <td align="center">：</td>
-                        <td align="left">長野高専 電気電子工学科</td>
-                    </tr>
-                </tbody>
-            </table>
-
-
-            <div class="section">
-                Skills
-            </div>
-
-            <span>
-                <p>TOEIC L&R：
-                <canvas id="sample" width="495" height="15"></canvas>
-                <script type="text/javascript">
-                    function draw(){
-                        var canvas = document.getElementById('sample');
-                        if (canvas.getContext){
-                            var ctx = canvas.getContext('2d');
-                            ctx.fillStyle = 'rgba(255, 100, 0, 1)'; // 最初にfillStyleを設定
-                            ctx.fillRect(0,0,710/2,15);
-                        }
-                    }
-                    draw(); // draw() 関数を呼び出して描画する
-                </script>
-                <style type="text/css">
-                    #sample {
-                        background: #555;
-                    }
-                </style>
-                </p>
-            </span>
-
-
-
-            <div class="section">
-                Hobbies
-            </div>
-
-            <p>
-                将棋，鉄道旅行
-            </p>
-
-            <div class="section">
-                Contact
-            </div>
-
-            <div>
-                <p class="key">X (Twitter)</p>
-                <p class="value">
-                    <a href="https://twitter.com/Matsuzaki_NLP">@Matsuzaki_NLP</a>
-                </p>
-                <p class="key">GitHub</p>
-                <p class="value">
-                    <a href="https://github.com/MatsuKosuke">MatsuKosuke</a>
-                </p>
-                <p class="key">Mail</p>
-                <p class="value">
-                    matsuzaki.kosuke.r7 (at) dc.tohoku.ac.jp
-                </p>
-            </div>
-
-
-
-            <br>
-
-            <br>
-            <div class="date">
-                <p>
-                    ページ開設日：2023/8/21，最終更新日：2026/4/1
-                </p>
-            </div>
-            
-            <!-- </div> 言語切替 -->
+    <div class="content">
+      <section id="news" class="section-card" data-section-title="sections.news">
+        <div class="section-heading">
+          <h2 data-i18n="sections.news"></h2>
         </div>
+        <ul class="item-list" id="news-list"></ul>
+      </section>
+
+      <section id="profile" class="section-card" data-section-title="sections.profile">
+        <div class="section-heading">
+          <h2 data-i18n="sections.profile"></h2>
+        </div>
+        <dl class="profile-list">
+          <div>
+            <dt data-i18n="profile.affiliation.label"></dt>
+            <dd data-i18n-html="profile.affiliation.value"></dd>
+          </div>
+          <div>
+            <dt data-i18n="profile.fellowships.label"></dt>
+            <dd data-i18n-html="profile.fellowships.value"></dd>
+          </div>
+          <div>
+            <dt data-i18n="profile.group.label"></dt>
+            <dd><a href="https://www.nlp.ecei.tohoku.ac.jp/" target="_blank" rel="noreferrer">Tohoku NLP Group</a></dd>
+          </div>
+          <div>
+            <dt data-i18n="profile.field.label"></dt>
+            <dd data-i18n-html="profile.field.value"></dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="publications" class="section-card" data-section-title="sections.publications">
+        <div class="section-heading">
+          <h2 data-i18n="sections.publications"></h2>
+        </div>
+        <ol class="publication-list" id="publication-list"></ol>
+      </section>
+
+      <section id="resources" class="section-card" data-section-title="sections.resources">
+        <div class="section-heading">
+          <h2 data-i18n="sections.resources"></h2>
+        </div>
+        <div class="prose" data-i18n-html="resources.junimorph"></div>
+      </section>
+
+      <section id="awards" class="section-card" data-section-title="sections.awards">
+        <div class="section-heading">
+          <h2 data-i18n="sections.awards"></h2>
+        </div>
+        <ul class="item-list" id="award-list"></ul>
+      </section>
+
+      <section id="education" class="section-card" data-section-title="sections.education">
+        <div class="section-heading">
+          <h2 data-i18n="sections.education"></h2>
+        </div>
+        <ul class="timeline" id="education-list"></ul>
+      </section>
+
+      <section id="experience" class="section-card" data-section-title="sections.experience">
+        <div class="section-heading">
+          <h2 data-i18n="sections.experience"></h2>
+        </div>
+        <ul class="timeline" id="experience-list"></ul>
+      </section>
+
+      <section id="skills" class="section-card" data-section-title="sections.skills">
+        <div class="section-heading">
+          <h2 data-i18n="sections.skills"></h2>
+        </div>
+        <div class="skill-row">
+          <h3>TOEIC L&amp;R</h3>
+          <div class="score-meter" data-score="710" data-max-score="990" aria-label="TOEIC L&amp;R score shown as a progress bar without numeric label">
+            <span></span>
+          </div>
+          
+          <h3 data-i18n="skills.eikenLabel"></h3>
+          <p data-i18n="skills.eikenValue"></p>
+        </div>
+      </section>
+
+      <section id="hobbies" class="section-card" data-section-title="sections.hobbies">
+        <div class="section-heading">
+          <h2 data-i18n="sections.hobbies"></h2>
+        </div>
+        <p data-i18n="hobbies.text"></p>
+      </section>
+
+      <section id="contact" class="section-card" data-section-title="sections.contact">
+        <div class="section-heading">
+          <h2 data-i18n="sections.contact"></h2>
+        </div>
+        <dl class="contact-list">
+          <div><dt>X</dt><dd><a href="https://twitter.com/Matsuzaki_NLP" target="_blank" rel="noreferrer">@Matsuzaki_NLP</a></dd></div>
+          <div><dt>GitHub</dt><dd><a href="https://github.com/MatsuKosuke" target="_blank" rel="noreferrer">MatsuKosuke</a></dd></div>
+          <div><dt>Mail</dt><dd>matsuzaki.kosuke.r7 (at) dc.tohoku.ac.jp</dd></div>
+        </dl>
+      </section>
     </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p data-i18n="footer.updated"></p>
+      <p>&copy; 2023–2026 Kosuke Matsuzaki / 松﨑 孝介</p>
+    </div>
+  </footer>
+
+  <script src="scripts/site-content.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
-
-<footer>
-    <div class="mx-auto" style="width: 100%; text-align: center;">
-        &copy; 2023 - 2026  松﨑 孝介 / Kosuke MATSUZAKI
-    </div>
-</footer>
-
 </html>

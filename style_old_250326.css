@@ -1,0 +1,132 @@
+h1 {
+    color: #0088ff;
+    font-size: 400%;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2%;
+    padding: 0;
+}
+
+h2 {
+    color: white;
+    background-color: #0088ff;
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2%;
+    padding: 0;
+}
+
+p {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 120%;
+}
+
+.key {
+    padding: 3px 25px;
+    margin: 5px auto; /* autoにすることで中央揃え */
+    font-size: 150%;
+    background-color: #26f;
+    color: white;
+    width: fit-content;
+}
+
+.value {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 150%;
+    color: black;
+}
+
+.kajo {
+    display: flex;
+    justify-content: left;
+    background-color: rgb(200, 220, 245);
+    font-size: 120%;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 1%;
+}
+
+table {
+    font-size: 150%;
+    margin: auto;
+}
+
+.background {
+    /* background: url(./images/background_kitakami.jpg); */
+    background: url(./images/background_hitachi.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* opacity: 0.3; */
+    /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+.toumei {
+    background-color: rgba(240, 240, 255, 0.9);
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.section {
+    font-size: 200%;
+    text-align: left;
+    background-color: #33b9eed0;
+    color: white;
+    padding-left: 5%;
+    margin-right: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.date p {
+    /* 更新日の表示 */
+    font-size: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* 画像とテキストを横並び */
+.imgwithtext img{
+    vertical-align: bottom;
+    display: inline-block;
+}
+.imgwithtext span{
+    font-size: 40px;
+    display: inline-block;
+}
+
+/* === ラジオボタンは非表示 ================== */
+#langChenge input[type="radio"]{
+    display    : none;
+}
+/* === 各ラジオボタンのラベルをボタンに変更 == */
+#langChenge label{
+    display    : inline-block;
+    border     : 1px solid #ccc;
+    background : #eee;
+    box-shadow : 2px 2px #999;
+    padding    : 2px 6px;
+}
+/* === 選択されている言語のラベル色を変更 ==== */
+#langJa:checked ~ label[for="langJa"] {
+    background : #ffa64d;
+}
+#langEn:checked ~ label[for="langEn"] {
+    background : #ffa64d;
+}
+/* === 選択されていない言語は非表示にする ==== */
+#langJa:not(:checked) ~ * *:lang(ja) {
+    display    : none;
+}
+#langEn:not(:checked) ~ * *:lang(en) {
+    display    : none;
+}
