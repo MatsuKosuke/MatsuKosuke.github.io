@@ -50,7 +50,7 @@ window.siteContent = {
     ],
     publications,
     resources: {
-      junimorph: "<p><a href=\"https://github.com/cl-tohoku/J-UniMorph\" target=\"_blank\" rel=\"noreferrer\">J-UniMorph</a> は，日本語形態論のためのデータセットです．世界中の言語の語形に共通のスキーマで特徴ラベルを付与する <a href=\"https://unimorph.github.io/\" target=\"_blank\" rel=\"noreferrer\">UniMorph</a> の日本語版として作成・公開しています．</p>"
+      junimorph: "<p><a href=\"https://github.com/cl-tohoku/J-UniMorph\" target=\"_blank\" rel=\"noreferrer\">J-UniMorph</a> は，日本語形態論のためのデータセットです．世界中の言語の語形に共通スキーマで特徴ラベルを付与する <a href=\"https://unimorph.github.io/\" target=\"_blank\" rel=\"noreferrer\">UniMorph</a> の日本語版として作成・公開しています．</p>"
     },
     awards: [
       "第20回言語処理若手シンポジウム（YANS2025）：<a href=\"https://yans.anlp.jp/entry/award#%E5%A5%A8%E5%8A%B1%E8%B3%9E-%E5%AF%BE%E8%B1%A1246%E4%BB%B6%E4%B8%AD24%E4%BB%B6\" target=\"_blank\" rel=\"noreferrer\">奨励賞</a>，2025/9/19．<div class=\"meta\">Rate: 24 / 246 (9.76%)</div>",
@@ -139,70 +139,5 @@ window.siteContent = {
     skills: { eikenLabel: "EIKEN", eikenValue: "EIKEN Grade 2" },
     hobbies: { text: "Shogi (Japanese Chess), Railway travel" },
     footer: { updated: "Established: 2023/8/21; Last updated: 2026/5/8" }
-  },
-  mk: {
-    hero: {
-      group: "", // "Tohoku NLP Group"
-      summary: "", //"東北大学大学院で自然言語処理の研究に取り組んでいます．"
-    },
-    toc: { title: "Contents" },
-    sections: {
-      news: "News",
-      profile: "Profile",
-      publications: "Publications",
-      resources: "Resources",
-      awards: "Awards",
-      education: "Education",
-      experience: "Experience",
-      skills: "Skills",
-      hobbies: "Hobbies",
-      contact: "Contact"
-    },
-    profile: {
-      affiliation: {
-        label: "Affiliation",
-        value: "とーほくだいがく　だいがくいん　ぞ拗ーほーかがくけんく拗ーか　はくしこーきかてー　１ねん"
-      },
-      fellowships: {
-        label: "Fellowships / Programs",
-        value: "にほんがくず拗つしんこーかい　とくべつけんく拗ーいん（DC１）<br>AIEたくえつ　だいがくいん　ぷろぐらむ"
-      },
-      group: { label: "Research group" },
-      field: {
-        label: "Research field",
-        value: "にほんごの　どーしの　ごけーへんか<br>にほんご　ほーげんの　おんせい　にんしき"
-      }
-    },
-    news: [
-      "２０２５／９／１９: YANS２０２５　にて　そ拗ーれいそ拗ーを　ず拗そ拗ー　しました．",
-      "２０２４／２／１６: <a href=\"https://cl-tohoku.github.io/J-UniMorph/inflection_tool/inflection.html\" target=\"_blank\" rel=\"noreferrer\">J-UniMorph Visualizer</a>（いみりかい・ごけー　へんかん　つーる）を　こーかい　しました．",
-      "２０２４／１／１５: にほんご　けーたいろんの　でーたせっと　<a href=\"https://github.com/cl-tohoku/J-UniMorph\" target=\"_blank\" rel=\"noreferrer\">J-UniMorph</a> を　こーかい　しました．"
-    ],
-    publications,
-    resources: {
-      junimorph: "<p><a href=\"https://github.com/cl-tohoku/J-UniMorph\" target=\"_blank\" rel=\"noreferrer\">J-UniMorph</a>わ，にほんご　けーたいろん　のための　でーたせっと　です．せかいず拗ーの　げんごの　ごけーに　こ拗ーつーの　すきーまで　とくと拗ー　らべるを　ふよする　<a href=\"https://unimorph.github.io/\" target=\"_blank\" rel=\"noreferrer\">UniMorph</a>の　にほんごばん　として　さくせー・こーかい　しています．</p>"
-    },
-    awards: [
-      "だい２０かい　げんごそ拗り　わかて　しんぽじうむ（YANS２０２５）：<a href=\"https://yans.anlp.jp/entry/award#%E5%A5%A8%E5%8A%B1%E8%B3%9E-%E5%AF%BE%E8%B1%A1246%E4%BB%B6%E4%B8%AD24%E4%BB%B6\" target=\"_blank\" rel=\"noreferrer\">奨励賞</a>，２０２５／９／１９．<div class=\"meta\">Rate: ２４ ／ ２４６ (９.７６%)</div>",
-      "とーほくだいがく　そーと拗ーそ拗ー（れーわ５ねんど），２０２４／３／２６．<div class=\"meta\">Rate: ２７ ／ ２３５８ (１.１５%)</div>",
-      "NLPわかてのかい（YANS）だい１８かい　しんぽじうむ：<a href=\"https://yans.anlp.jp/entry/award/#スポンサー賞\" target=\"_blank\" rel=\"noreferrer\">Helpfeel賞</a>（すぽんさーそ拗ー），２０２３／８／３１．<div class=\"meta\">Rate: １ ／ １３８ (０.７２%)</div>",
-      "<a href=\"https://www.iee.jp/tokai/award/%E6%94%AF%E9%83%A8%E9%95%B7%E8%B3%9E%E5%8F%97%E8%B3%9E%E8%80%852021%E5%B9%B4/\" target=\"_blank\" rel=\"noreferrer\">電気学会東海支部長賞（令和3年度）</a>，２０２２／３／１．<div class=\"meta\">がぞーそ拗り　による　ぞ拗ーおんこーか　しんちれーたの　きんいつせー　ほ拗ーかに　かんする　けんく拗ー</div>"
-    ],
-    education: [
-      { period: "２０２６／４ –", text: "とーほくだいがく　だいがくいん　ぞ拗ーほーかがくけんく拗ーか　はくしこーきかてー" },
-      { period: "２０２４／４ – ２０２６／３", text: "とーほくだいがく　だいがくいん　ぞ拗ーほーかがくけんく拗ーか　はくしぜんきかてー<br>す拗ーし（ぞ拗ーほーかがく）す拗とく" },
-      { period: "２０２２／４ – ２０２４／３", text: "とーほくだいがく　こーがくぶ　でんきぞ拗ーほーぶつり　こーがくか（３ねんじへんぬ拗ーがく）<br>がくし（こーがく）す拗とく" },
-      { period: "２０１７／４ – ２０２２／３", text: "ながのこーせん　でんきでんし　こーがくか<br>ず拗んがくし（こーがく）す拗とく" }
-    ],
-    experience: [
-      { period: "２０２６／４ – ２０２９／３", text: "にほんがくず拗つしんこーかい　とくべつけんく拗ーいん（DC１）" },
-      { period: "２０２６／４ – ２０２６／６", text: "こ拗ーどーけんく拗ー　りさーち・あしすたんと（RA）" },
-      { period: "２０２５／１０ – ２０２６／３", text: "ぞ拗ーほーつーしんけんく拗ーきこー（NICT）　こ拗ーどーけんく拗ー　いんたーんしっぷ" },
-      { period: "２０２４／１０ – ２０２９／３", text: "AIEたくえつ　だいがくいん　ぷろぐらむ　りさーち・あしすたんと（RA）" },
-      { period: "２０２４／１０ – ２０２５／９", text: "しぜんかがくそーごーじっけん　丁ーちんぐ・あしすたんと（TA）" },
-    ],
-    skills: { eikenLabel: "えーけん", eikenValue: "じつよー　えーご　ぎのー　けんてー　２く拗ー" },
-    hobbies: { text: "そ拗ーぎ，てつどー　ろ拗こー" },
-    footer: { updated: "ぺーじ　かいせつび：２０２３／８／２１，さいす拗ー　こーしんび：２０２６／６／１" }
-  },
+  }
 };

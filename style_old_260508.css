@@ -258,15 +258,6 @@ dd { margin: 0; }
 
 .prose p:last-child { margin-bottom: 0; }
 
-.mk-glyph {
-  height: 1em;
-  width: auto;
-  display: inline-block;
-  vertical-align: -0.12em;
-  margin-left: 0.02em;
-  margin-right: 0.02em;
-}
-
 .score-meter {
   width: min(100%, 360px);
   height: 14px;
